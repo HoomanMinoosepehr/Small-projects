@@ -17,9 +17,13 @@
 
 const prompt = require(`prompt-sync`)();
 let num = process.argv[2];
+//why num is 10num?!!
 
 let fuzz = [];
-    for ( let i=1 ; i<(num+1) ; i++ ){
+if ( num == null ){
+    console.log(`Mumber expected!`)
+} else {
+    for ( let i=1 ; i<= num ; i++ ){
         if (i%15 == 0){
             fuzz.push("FizzBuzz")
         } else if (i%3 == 0){
@@ -32,3 +36,4 @@ let fuzz = [];
         }
     } 
     console.log(fuzz);
+}
